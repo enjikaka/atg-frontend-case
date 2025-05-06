@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import type { Bet } from "../../state/bets/state";
@@ -10,6 +10,10 @@ export function BetSelector() {
     const bet = useSelector(currentBetSelector);
 
     const bets: Array<Bet> = ['V75', 'V86', 'GS75'];
+
+    useEffect(() => {
+        dispatch(loadBetAction(bet));
+    }, [bet]);
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         dispatch(loadBetAction(e.target.value as Bet));
