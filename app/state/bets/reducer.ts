@@ -10,8 +10,11 @@ export const betsReducer = createReducer<BetState>(initialState, (builder) => {
     });
 
     builder.addCase(loadBetSuccess, (state, action) => {
-        state.bets[action.payload.betType] = action.payload;
-        state.bets[action.payload.betType].status = 'success';
+        state.bets[action.payload.betType] = {
+            ...state.bets[action.payload.betType],
+            ...action.payload,
+            status: 'success',
+        };
     });
 
     builder.addCase(loadBetFailure, state => {
