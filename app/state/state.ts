@@ -1,7 +1,7 @@
 import type { BetState } from "./bets/state";
 import { initialState as betsInitialState } from "./bets/state";
 
-interface CoreState {
+export interface CoreState {
     bets: BetState;
 }
 
