@@ -5,6 +5,8 @@ import type { Bet } from "../../state/bets/state";
 import { loadBetAction } from "../../state/bets/actions";
 import { currentBetSelector } from "~/state/bets/selectors";
 
+import styles from "./styles.module.css";
+
 export function BetSelector() {
     const dispatch = useDispatch();
     const bet = useSelector(currentBetSelector);
@@ -19,7 +21,10 @@ export function BetSelector() {
         dispatch(loadBetAction(e.target.value as Bet));
     }
 
-    return <select onInput={handleChange} defaultValue={bet}>
-        {bets.map(bet => <option key={bet} value={bet}>{bet}</option>)}
-    </select>;
+    return <div className={styles.betSelectorWrapper}>
+        <label htmlFor="bet-selector">Välj spel</label>
+        <select id="bet-selector" onChange={handleChange} defaultValue={bet}>
+            {bets.map(bet => <option key={bet} value={bet}>{bet}</option>)}
+        </select>
+    </div>;
 }

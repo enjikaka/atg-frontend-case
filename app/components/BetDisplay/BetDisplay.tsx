@@ -2,6 +2,8 @@ import { useSelector } from "react-redux";
 import { currentRaceInfoSelector } from "~/state/bets/selectors";
 import type { Bet } from "~/state/bets/state";
 
+import styles from "./styles.module.css";
+
 type Props = { bet: Bet };
 
 export function BetDisplay({ bet }: Props) {
@@ -24,8 +26,8 @@ export function BetDisplay({ bet }: Props) {
         </div>;
     }
 
-    return <div>
-        <h1>Senaste resultat för {bet}</h1>
+    return <div className={styles.wrapper}>
+        <strong>Senaste resultat för {bet}</strong>
         {content}
     </div>;
 }

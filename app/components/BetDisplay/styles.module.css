@@ -1,0 +1,9 @@
+.wrapper {
+    background-color: white;
+    color: rgb(97, 97, 97);
+    padding: 1rem;
+
+    & strong {
+        color: black;
+    }
+}
