@@ -1,13 +1,23 @@
 import type { Route } from "./+types/home";
+
+import { useSelector } from "react-redux";
+import { currentBetSelector } from "../state/bets/selectors";
+
 import { BetSelector } from "../components/BetSelector/BetSelector";
+import { BetDisplay } from "../components/BetDisplay/BetDisplay";
 
 export function meta({ }: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "ATG Front-end Case" },
+    { name: "description", content: "Check the bets!" },
   ];
 }
 
 export default function Home() {
-  return <BetSelector />;
+  const bet = useSelector(currentBetSelector);
+
+  return <>
+    <BetSelector />
+    <BetDisplay bet={bet} />
+  </>;
 }
