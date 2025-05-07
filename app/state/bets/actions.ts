@@ -1,6 +1,6 @@
 import { createAction } from "@reduxjs/toolkit";
 import type { Bet, RaceInfo } from "./state";
 
-export const loadBetAction = createAction<Bet, "bets/LOAD_BET">("bets/LOAD_BET");
-export const loadBetSuccess = createAction<Omit<RaceInfo, 'status'>, "bets/LOAD_BET_SUCCESS">("bets/LOAD_BET_SUCCESS");
-export const loadBetFailure = createAction<Error, "bets/LOAD_BET_FAILURE">("bets/LOAD_BET_FAILURE");
+export const loadAction = createAction<Bet, "bets/LOAD">("bets/LOAD");
+export const loadSuccessAction = createAction<Omit<RaceInfo, 'status'>, "bets/LOAD__SUCCESS">("bets/LOAD__SUCCESS");
+export const loadFailureAction = createAction<Error, "bets/LOAD__FAILURE">("bets/LOAD__FAILURE");

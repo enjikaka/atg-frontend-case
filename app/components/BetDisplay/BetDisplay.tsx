@@ -27,7 +27,7 @@ export function BetDisplay({ bet }: Props) {
     }
 
     return <div className={styles.wrapper}>
-        <strong>Senaste resultat för {bet}</strong>
+        <strong>{raceInfo.trackNames.join(', ')} - {new Date(raceInfo.startTime).getHours()}:{new Date(raceInfo.startTime).getMinutes()}</strong>
         {content}
     </div>;
 }
