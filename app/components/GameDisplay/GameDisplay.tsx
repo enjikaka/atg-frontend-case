@@ -12,5 +12,18 @@ export function GameDisplay({ game }: Props) {
             <span>{game.number} — {game.name}</span>
             <span>{new Date(game.scheduledStartTime).toLocaleTimeString().substring(0, 5)}</span>
         </header>
+        <div className={styles.gameDisplayContent}>
+            {game.starts.map(start => <div key={start.id}>
+                <details>
+                    <summary>{start.number} {start.horse.name} — {start.driver.firstName} {start.driver.lastName}</summary>
+                    <dl>
+                        <dt>Tränare</dt>
+                        <dd>{start.horse.trainer.firstName} {start.horse.trainer.lastName}</dd>
+                        <dt>Far</dt>
+                        <dd>{start.horse.pedigree.father.name}</dd>
+                    </dl>
+                </details>
+            </div>)}
+        </div>
     </article>;
 }
