@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import type { Bet } from "../../state/bets/state";
-import { loadBetAction } from "../../state/bets/actions";
+import { loadAction } from "../../state/bets/actions";
 import { currentBetSelector } from "~/state/bets/selectors";
 
 import styles from "./styles.module.css";
@@ -14,11 +14,11 @@ export function BetSelector() {
     const bets: Array<Bet> = ['V75', 'V86', 'GS75'];
 
     useEffect(() => {
-        dispatch(loadBetAction(bet));
+        dispatch(loadAction(bet));
     }, [bet]);
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        dispatch(loadBetAction(e.target.value as Bet));
+        dispatch(loadAction(e.target.value as Bet));
     }
 
     return <div className={styles.betSelectorWrapper}>
