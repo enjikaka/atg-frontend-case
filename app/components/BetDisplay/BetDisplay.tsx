@@ -25,7 +25,7 @@ export function BetDisplay({ bet }: Props) {
 
     if (raceInfo.status === 'success') {
         content = <>
-            <strong>{raceInfo.trackNames.join(', ')} - {new Date(raceInfo.startTime).toLocaleTimeString().substring(0, 5)}</strong>
+            <h1>{raceInfo.trackNames.join(', ')} - {new Date(raceInfo.startTime).toLocaleTimeString().substring(0, 5)}</h1>
             {Object.values(games).map(game => <GameDisplay key={game.id} game={game} />)}
         </>;
     }

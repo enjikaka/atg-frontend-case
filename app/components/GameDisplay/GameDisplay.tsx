@@ -9,7 +9,8 @@ type Props = Readonly<{
 export function GameDisplay({ game }: Props) {
     return <article key={game.id} className={styles.gameDisplay}>
         <header>
-            <div><span className={styles.digit}>{game.number}</span> — {game.name}</div>
+            <span className={styles.digit}>{game.number}</span>
+            <span>{game.name}</span>
             <span>{new Date(game.scheduledStartTime).toLocaleTimeString().substring(0, 5)}</span>
         </header>
         <div className={styles.gameDisplayContent}>

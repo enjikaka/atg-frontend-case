@@ -1,7 +1,9 @@
 .wrapper {
     background-color: white;
     color: rgb(97, 97, 97);
+    margin: 1rem;
     padding: 1rem;
+    width: calc(100% - 2rem);
 
     & strong {
         color: black;

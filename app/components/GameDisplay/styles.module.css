@@ -3,13 +3,20 @@
 }
 
 .gameDisplay header {
+    background-color: lightyellow;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    gap: 1rem;
 }
 
-.gameDisplay header span:nth-child(1) {
+.gameDisplay header span:nth-child(2) {
     flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .gameDisplay + .gameDisplay {
@@ -18,9 +25,8 @@
 }
 
 .gameDisplay details {
-    padding: 1rem;
+    padding: 0.8rem 1rem;
     border: 1px solid #ccc;
-    border-radius: 0.5rem;
     margin-block: 1rem;
 }
 
@@ -32,9 +38,7 @@
     text-rendering: optimizeLegibility;
     font-variant-numeric: tabular-nums;
     width: 42px;
-    height: 42px;
     display: inline-block;
     font-weight: 500;
     text-align: center;
-    line-height: 42px;
 }
