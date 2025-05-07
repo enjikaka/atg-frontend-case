@@ -9,13 +9,13 @@ type Props = Readonly<{
 export function GameDisplay({ game }: Props) {
     return <article key={game.id} className={styles.gameDisplay}>
         <header>
-            <span>{game.number} — {game.name}</span>
+            <div><span className={styles.digit}>{game.number}</span> — {game.name}</div>
             <span>{new Date(game.scheduledStartTime).toLocaleTimeString().substring(0, 5)}</span>
         </header>
         <div className={styles.gameDisplayContent}>
             {game.starts.map(start => <div key={start.id}>
                 <details>
-                    <summary>{start.number} {start.horse.name} — {start.driver.firstName} {start.driver.lastName}</summary>
+                    <summary><span className={styles.digit}>{start.number}</span> <strong>{start.horse.name}</strong> — {start.driver.firstName} {start.driver.lastName}</summary>
                     <dl>
                         <dt>Tränare</dt>
                         <dd>{start.horse.trainer.firstName} {start.horse.trainer.lastName}</dd>

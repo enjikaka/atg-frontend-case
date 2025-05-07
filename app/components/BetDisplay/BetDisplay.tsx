@@ -24,11 +24,13 @@ export function BetDisplay({ bet }: Props) {
     }
 
     if (raceInfo.status === 'success') {
-        content = <strong>{raceInfo.trackNames.join(', ')} - {new Date(raceInfo.startTime).toLocaleTimeString().substring(0, 5)}</strong>;
+        content = <>
+            <strong>{raceInfo.trackNames.join(', ')} - {new Date(raceInfo.startTime).toLocaleTimeString().substring(0, 5)}</strong>
+            {Object.values(games).map(game => <GameDisplay key={game.id} game={game} />)}
+        </>;
     }
 
     return <div className={styles.wrapper}>
         {content}
-        {Object.values(games).map(game => <GameDisplay key={game.id} game={game} />)}
     </div>;
 }
