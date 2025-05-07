@@ -3,7 +3,7 @@ import type { GamesState } from "./state";
 import { loadAction, loadFailureAction, loadSuccessAction } from "./actions";
 import { initialState } from "./state";
 
-export const betsReducer = createReducer<GamesState>(initialState, (builder) => {
+export const gamesReducer = createReducer<GamesState>(initialState, (builder) => {
     builder.addCase(loadAction, (state, action) => {
         state.status = 'loading';
     });
