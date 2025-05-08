@@ -7,6 +7,7 @@
 - Med Vite blir app.css-stilarna globala, i övrigt är stylesheets scopade med CSS Modules. (för egna småprojekt föredrar jag oftast ShadowDOM för scoping, men där är React fortfarande lite efter...)
 - La till unit-tester med Vitest för reducers och med redux-saga-test-plan för sagas. Hos min förra arbetsgivare var vi lite väl nitiska och expectade varje steg/yield i sagas. Mycket smidigare att använda redux-saga-test-plan:s expectSaga - men gäller att va noga att göra rätt så man assertar I/O ordentligt då - och verkligen hanterar alla fall.
 - Strukterade Redux-state ungefär så som vi hade det på TIDAL. Finns ganska många "standarder" på hur man strukturerar det; och nu för tiden finns ju RTK Query och slices också...
+- Instruktionerna önskar `npm run eject`. [Finns ej i CRA](https://github.com/facebook/create-react-app/blob/main/package.json) eller boilerplaten jag använde så... ni får leva med lite configfiler...
 
 ## Kör
 
