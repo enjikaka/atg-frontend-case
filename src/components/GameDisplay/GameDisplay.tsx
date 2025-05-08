@@ -13,9 +13,10 @@ export function GameDisplay({ game }: Props) {
 				<span className={styles.digit}>{game.number}</span>
 				<span>{game.name}</span>
 				<span>
-					{new Date(game.scheduledStartTime)
-						.toLocaleTimeString()
-						.substring(0, 5)}
+					{new Date(game.scheduledStartTime).toLocaleTimeString("sv-SE", {
+						hour: "2-digit",
+						minute: "2-digit",
+					})}
 				</span>
 			</header>
 			<div className={styles.gameDisplayContent}>

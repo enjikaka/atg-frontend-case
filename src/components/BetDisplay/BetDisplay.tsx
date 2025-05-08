@@ -28,7 +28,10 @@ export function BetDisplay({ bet }: Props) {
 			<>
 				<h1>
 					{raceInfo.trackNames.join(", ")} -{" "}
-					{new Date(raceInfo.startTime).toLocaleTimeString().substring(0, 5)}
+					{new Date(raceInfo.startTime).toLocaleTimeString("sv-SE", {
+						hour: "2-digit",
+						minute: "2-digit",
+					})}
 				</h1>
 				{Object.values(games).map((game) => (
 					<GameDisplay key={game.id} game={game} />
