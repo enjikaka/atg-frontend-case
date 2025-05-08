@@ -1,4 +1,4 @@
-import { takeEvery, call, put } from "typed-redux-saga";
+import { takeLatest, call, put } from "typed-redux-saga";
 import { loadAction, loadSuccessAction, loadFailureAction } from "./actions";
 import type { GamesResponse } from "./types";
 
@@ -24,5 +24,5 @@ function* loadGamesSaga(action: ReturnType<typeof loadAction>) {
 }
 
 export function* rootSaga() {
-	yield takeEvery(loadAction, loadGamesSaga);
+	yield takeLatest(loadAction, loadGamesSaga);
 }
