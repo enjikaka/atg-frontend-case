@@ -3,6 +3,7 @@ import { loadAction, loadFailureAction, loadSuccessAction } from "./actions";
 import { gamesReducer } from "./reducer";
 import { initialState } from "./state";
 import { mockedGame } from "./fixtures";
+
 describe('loadAction', () => {
     it('sets status to loading and currentBet to the bet type', () => {
         const action = loadAction('V75');

@@ -4,13 +4,13 @@ import { loadAction as loadGamesAction, loadFailureAction as loadGamesFailureAct
 import type { Bet } from "./state";
 import type { RacingInfoResponse } from "./types";
 
-async function fetchBets(bet: Bet): Promise<RacingInfoResponse> {
+export async function fetchBets(bet: Bet): Promise<RacingInfoResponse> {
     const response = await fetch(`https://www.atg.se/services/racinginfo/v1/api/products/${bet}`);
 
     return response.json();
 }
 
-function* loadBetsSaga(action: ReturnType<typeof loadAction>) {
+export function* loadBetsSaga(action: ReturnType<typeof loadAction>) {
     const bet = action.payload;
 
     try {
