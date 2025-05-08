@@ -1,7 +1,7 @@
 import { describe, it } from 'vitest';
 import { expectSaga } from 'redux-saga-test-plan';
 import { loadAction, loadFailureAction, loadSuccessAction } from './actions';
-import { loadSuccessAction as loadGamesSuccessAction, loadFailureAction as loadGamesFailureAction } from '~/state/games/actions';
+import { loadSuccessAction as loadGamesSuccessAction, loadFailureAction as loadGamesFailureAction } from 'src/state/games/actions';
 import { loadBetsSaga, fetchBets } from './sagas';
 import { mockedGame } from '../games/fixtures';
 

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import type { Bet } from "../../state/bets/state";
 import { loadAction } from "../../state/bets/actions";
-import { currentBetSelector } from "~/state/bets/selectors";
+import { currentBetSelector } from "src/state/bets/selectors";
 
 import styles from "./styles.module.css";
 

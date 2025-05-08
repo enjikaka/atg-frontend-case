@@ -1,4 +1,4 @@
-import type { Race } from "~/state/games/types";
+import type { Race } from "src/state/games/types";
 
 import styles from "./styles.module.css";
 

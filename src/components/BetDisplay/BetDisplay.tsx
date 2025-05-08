@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { currentRaceInfoSelector } from "~/state/bets/selectors";
-import { gamesSelector } from "~/state/games/selectors";
-import type { Bet } from "~/state/bets/state";
+import { currentRaceInfoSelector } from "src/state/bets/selectors";
+import { gamesSelector } from "src/state/games/selectors";
+import type { Bet } from "src/state/bets/state";
 
 import { GameDisplay } from "../GameDisplay/GameDisplay";
 

@@ -1,6 +1,6 @@
 import { takeEvery, call, put, race, take } from "typed-redux-saga";
 import { loadAction, loadFailureAction, loadSuccessAction } from "./actions";
-import { loadAction as loadGamesAction, loadFailureAction as loadGamesFailureAction, loadSuccessAction as loadGamesSuccessAction } from "~/state/games/actions";
+import { loadAction as loadGamesAction, loadFailureAction as loadGamesFailureAction, loadSuccessAction as loadGamesSuccessAction } from "src/state/games/actions";
 import type { Bet } from "./state";
 import type { RacingInfoResponse } from "./types";
 
