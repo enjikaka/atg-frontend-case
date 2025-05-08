@@ -4,11 +4,11 @@ import { initialState as gamesInitialState } from "./games/state";
 import type { GamesState } from "./games/state";
 
 export interface CoreState {
-    bets: BetState;
-    games: GamesState;
+	bets: BetState;
+	games: GamesState;
 }
 
 export const initialState: CoreState = {
-    bets: betsInitialState,
-    games: gamesInitialState,
-}
+	bets: betsInitialState,
+	games: gamesInitialState,
+};
