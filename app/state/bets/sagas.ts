@@ -11,7 +11,6 @@ async function fetchBets(bet: Bet): Promise<RacingInfoResponse> {
 }
 
 function* loadBetsSaga(action: ReturnType<typeof loadAction>) {
-    console.debug('loadBetsSaga', action);
     const bet = action.payload;
 
     try {

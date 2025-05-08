@@ -14,7 +14,8 @@ export const gamesReducer = createReducer<GamesState>(initialState, (builder) =>
         state.status = 'success';
     });
 
-    builder.addCase(loadFailureAction, state => {
+    builder.addCase(loadFailureAction, (state, action) => {
         state.status = 'failure';
+        state.error = action.payload;
     });
 });
